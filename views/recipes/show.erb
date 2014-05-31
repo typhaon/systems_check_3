@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<h1> <%= @recipe_results["name"] %> </h1>
+
+<h3> <%= @recipe_results["description"] %> </h3>
+
+<ul>
+  <% @results.each do |recipe| %>
+    <li><%="#{recipe["name"]}"%>  -- <%="#{recipe["ingredients"]}"%> -- <%="#{recipe["description"]}"%> </li>
+  <% end %>
+</ul>
+
+<h4> <%= @recipe_results["instructions"] %> </h4>
+
+
+
+
+
+
+</html>
