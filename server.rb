@@ -32,7 +32,7 @@ get '/recipes/:id' do
 
 ident = params[:id]
 
-query = "SELECT recipes.instructions, ingredients.name AS ingredients
+query = "SELECT ingredients.name AS ingredients
         FROM recipes
         JOIN ingredients ON ingredients.recipe_id = recipes.id
         WHERE recipes.id = #{ident}"
